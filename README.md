@@ -3,6 +3,7 @@ stamplay-tutorials
 
 A set of basic tutorials to understand Stamplay APIs
 
+* **01-local-login** - [Live Demo](https://31fd96.stamplay.com/index)
 
 -----------------------
 
