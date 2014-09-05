@@ -1,0 +1,76 @@
+<div class="container">
+  
+  {{#if user}}
+  
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="alert alert-success">
+        <strong><span class="glyphicon glyphicon-ok"></span> Congrats now you are logged as {{user.email}}!</strong>
+      </div>
+    </div>
+  </div>
+  
+  {{else}}
+
+  <div class="row">
+      
+    <div class="col-md-6">
+      
+      <div class="wrapper">
+        <form id="reg-form" action="/api/user/v0/users" method="POST" class="form-signin" data-parsley-validate>       
+          <h3 class="form-signin-heading">Signup form</h3>
+          <input type="text" class="form-control" name="email" id="reg-email" placeholder="Email Address" required="" autofocus="" data-parsley-type="email" data-parsley-required data-parsley-email_validate/>      
+          <input type="password" class="form-control" name="password" id="reg-password" placeholder="Password" data-parsley-required>
+          
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+          </label>
+          <button id="reg-button" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>   
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      
+      <div class="row">
+        <div class="col-md-12" style="display:none;" id="error-login">
+            <div class="alert alert-danger">
+                <span class="glyphicon glyphicon-remove"></span><strong>Email or password is incorrect!</strong>
+            </div>
+        </div>
+      </div>
+      
+      <form id="login-form" action="/api/user/v0/users" method="POST" class="form-signin" data-parsley-validate>       
+          <h3 class="form-signin-heading">Login form (Async)</h3>
+          <input type="text" class="form-control" name="email" id="login-email" placeholder="Email Address" required="" autofocus="" data-parsley-type="email" data-parsley-required data-parsley-email_validate/>                
+          <input type="password" class="form-control" name="password" id="login-password" placeholder="Password" data-parsley-required>
+          
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+          </label>
+          <button id="login-button" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+        </form>
+      
+    </div>
+
+    <div class="col-md-6">
+       <form id="login-form-2" action="/auth/v0/local/login" method="POST" class="form-signin" data-parsley-validate>       
+          <h3 class="form-signin-heading">Login form (redirect)</h3>
+          <input type="text" class="form-control" name="email" id="login-email-2" placeholder="Email Address" required="" autofocus="" data-parsley-type="email" data-parsley-required data-parsley-email_validate/>                
+          <input type="password" class="form-control" name="password" id="login-password-2" placeholder="Password" data-parsley-required>          
+          
+          <input type="hidden" name="success_url" value="/index">
+          <input type="hidden" name="error_url" value="/no">
+
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+          </label>
+          <button type="submit" class="btn btn-lg btn-primary btn-block" id="login-button-2" >Login</button>   
+        </form>
+
+    </div>
+
+  </div>
+  {{/if}}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{{assetsUrl}}/assets/favicon.png">
+
+    <title>Stamplay | An awesome new app</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{assetsUrl}}/assets/bootstrap.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="{{assetsUrl}}/assets/jumbotron-narrow.css" rel="stylesheet">
+    <link href="{{assetsUrl}}/assets/custom-style.css" rel="stylesheet">
+    
+  </head>
+
+  <body>
+     <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          {{#if user}}
+            <a href='/auth/v0/logout' class="btn btn-danger">Logout</a>
+          {{/if}}
+        </ul>
+        <h3 class="text-muted">Signup users with email and password </h3>
+      </div>
+    {{{body}}}
+      <div class="footer">
+        <p>&copy; Stamplay <script>document.write(new Date().getFullYear());</script></p>
+      </div>
+
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+      var _APP_ID = "{{appId}}";
+      var _APP_DOMAIN = "{{baseUrl}}";
+    </script>
+    
+    <script src="{{assetsUrl}}/assets/jquery-1.11.1.min.js"></script>
+    <script src="{{assetsUrl}}/assets/parsley.min.js"></script>
+    <script src="{{assetsUrl}}/assets/bootstrap.min.js"></script>
+    <script src="{{assetsUrl}}/assets/registration.js"></script>
+    <script src="{{assetsUrl}}/assets/login.js"></script>
+
+  
+  </body>
+</html>
