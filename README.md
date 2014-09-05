@@ -6,7 +6,7 @@ A set of basic tutorials to understand Stamplay APIs
 
 -----------------------
 
-# Using the examples the app
+## Using the examples
 
 Every example is a set of files that you only need to upload on you app on stamplay.com.
 
