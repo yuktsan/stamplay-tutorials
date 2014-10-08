@@ -8,9 +8,9 @@ See how to accept signups with email and password, handling password resets.
 
 -----------------------
 
-## Using the examples
+## Using the example
 
-Every example is a set of files that you only need to upload on you app on stamplay.com.
+This example is a set of files that you only need to upload on you app on stamplay.com.
 
 In order to start clone this repository :
 
@@ -18,7 +18,7 @@ In order to start clone this repository :
 
 Or download it as a zip file
 	
-	https://github.com/Stamplay/stamplay-aboutme/archive/master.zip 
+	https://github.com/Stamplay/stamplay-tutorials/archive/master.zip
 
  upload the frontend files in your app and you can do it in two ways:
 
