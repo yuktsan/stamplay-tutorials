@@ -4,6 +4,7 @@ stamplay-tutorials
 A set of basic tutorials to understand Stamplay APIs
 
 * **01-local-login** - [Live Demo](https://31fd96.stamplay.com/index)
+* **02-stamplay-js-sdk** - [Live Demo](https://b1b8d4.stamplay.com/index)
 
 -----------------------
 
@@ -17,7 +18,7 @@ In order to start clone this repository :
 
 Or download it as a zip file
 	
-	https://github.com/Stamplay/stamplay-aboutme/archive/master.zip 
+	https://github.com/Stamplay/stamplay-tutorials/archive/master.zip 
 
  upload the frontend files in your app and you can do it in two ways:
 

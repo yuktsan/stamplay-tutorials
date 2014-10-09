@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-framework="angularjs">
+  <head>
+    <meta charset="utf-8">
+    <title>AngularJS • TodoMVC with Stamplay JS SDK</title>
+    <link rel="stylesheet" href="{{assetsUrl}}/assets/base.css">
+    <link rel="stylesheet" href="{{assetsUrl}}/assets/login.css">
+    <link rel="shortcut icon" href="{{assetsUrl}}/assets/Check_Sign-512.png">
+    <style>[ng-cloak] { display: none; }</style>
+    <base href="/">
+  </head>
+
+<script>
+ var userLogged = {{#if user._id}}true{{else}}false{{/if}},
+   appId = "{{appId}}",
+   assetsUrl = "{{assetsUrl}}",
+   email = {{#if user.email}}"{{user.email}}"{{else}}""{{/if}},
+   userId = {{#if user._id}}"{{user._id}}"{{else}}""{{/if}},
+   profileImg = {{#if user._id}}"{{user.profileImg}}"{{else}}""{{/if}},
+   displayName = {{#if user._id}}"{{user.displayName}}"{{else}}""{{/if}};
+</script>
+
+  <body ng-app="todomvc">
+    {{{body}}}
+
+<script src="//drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/0.0.3/stamplay.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-route.min.js"></script>
+<script src="{{assetsUrl}}/assets/todoStorage.js"></script>
+<script src="{{assetsUrl}}/assets/app.js"></script>
+
+<script src="{{assetsUrl}}/assets/todoIndex.js"></script>
+
+<script src="{{assetsUrl}}/assets/todoCtrl.js"></script>
+<script src="{{assetsUrl}}/assets/todoFocus.js"></script>
+<script src="{{assetsUrl}}/assets/todoEscape.js"></script>
+  </body>
+
+</html>
