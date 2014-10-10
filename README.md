@@ -3,8 +3,8 @@ stamplay-tutorials
 
 A set of basic tutorials to understand Stamplay APIs
 
-* **01-local-login** - [Live Demo](https://31fd96.stamplay.com/index)
-* **02-stamplay-js-sdk** - [Live Demo](https://b1b8d4.stamplay.com/index)
+* **01-email+password-login-and-signup** - [Live Demo](https://31fd96.stamplay.com/index)
+* **02-TODO-MVC-with-js-sdk** - [Live Demo](https://b1b8d4.stamplay.com/index)
 
 -----------------------
 
