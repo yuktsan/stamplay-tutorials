@@ -30,6 +30,11 @@ Define a form schema for this app, we will define the landing form as follows:
 ### Landing form
 * Name: **email**, Type: **string**, Required : **true**
 
+## Access your data
+You can access to the form entries via API at :
+
+* https://24f1ab.stamplay.com/api/form/v0/forms/landing-form/entries
+
 ## Upload the application's file
 
 In order to start clone this repository :
