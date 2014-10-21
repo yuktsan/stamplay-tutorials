@@ -35,6 +35,10 @@ You can access to the form entries via API at :
 
 * https://24f1ab.stamplay.com/api/form/v0/forms/landing-form/entries
 
+or if you are creating an app:
+
+* https://<APPID>.stamplay.com/api/form/v0/forms/<FORMID>/entries
+
 ## Upload the application's file
 
 In order to start clone this repository :
