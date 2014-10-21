@@ -37,7 +37,7 @@ You can access to the form entries via API at :
 
 or if you are creating an app:
 
-* https://<APPID>.stamplay.com/api/form/v0/forms/<FORMID>/entries
+* https://APPID.stamplay.com/api/form/v0/forms/FORMID/entries
 
 ## Upload the application's file
 
