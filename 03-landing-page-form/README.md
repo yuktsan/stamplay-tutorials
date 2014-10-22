@@ -1,7 +1,7 @@
 stamplay-tutorials - 03-landing-page-form
 ========================================
 
-See how to use the Stamplay Form API to submit a form entry with Angular JS.
+See how to use the Stamplay Form API to submit a form entry.
 
 
 
