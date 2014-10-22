@@ -1,7 +1,7 @@
-stamplay-tutorials - 02-stamplay-js-sdk
+stamplay-tutorials - 03-landing-page-form
 ========================================
 
-See how to use the Stamplay JavaScript SDK to recreate with AngularJS a simple TodoMVC.
+See how to use the Stamplay Form API to submit a form entry.
 
 
 
@@ -13,22 +13,31 @@ See how to use the Stamplay JavaScript SDK to recreate with AngularJS a simple T
 For using this example you have to:
 
 * Create a Stamplay app
-* Add custom object component and configure it
+* Add form component and configure it
 * Upload the application's files
 
 ## Create a Stamplay app
 
 Go to [Stamplay Editor](https://editor.stamplay.com/) and create a new application.
 
-## Add custom object component and configure it
+## Add form component and configure it
 
-Define the entity for this app, we will define the Tag custom object as follows:
+Define a form schema for this app, we will define the landing form as follows:
+### Settings 
+* One entry per user : false
+* Only logged user : true
 
-### Tag
-* Name: **title**, Type: **string**, Required : **true**
-* Name: **completed**, Type: **boolean**, Required : **true**
-* Name: **user**, Type: **string**, Required : **true**
+### Landing form
+* Name: **email**, Type: **string**, Required : **true**
 
+## Access your data
+You can access to the form entries via API at :
+
+* https://24f1ab.stamplay.com/api/form/v0/forms/landing-form/entries
+
+or if you are creating an app:
+
+* https://APPID.stamplay.com/api/form/v0/forms/FORMID/entries
 
 ## Upload the application's file
 
@@ -44,3 +53,4 @@ Or download it as a zip file
 
 * Copy/Upload them via the Layout section of your app on Stamplay editor
 * Get Stamplay Sync on [OSX](http://cdn.stamplay.com/stamplay-sync/mac/stamplay-sync.zip) or [PC](http://cdn.stamplay.com/stamplay-sync/win/stamplay-sync.zip) and run it. Make it download the frontend assets of your app and then replace them with the ones you got from this repo. Stamplay Sync will upload everything for you on your app.
+
