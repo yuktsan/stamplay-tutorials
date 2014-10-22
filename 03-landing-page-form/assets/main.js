@@ -1,6 +1,8 @@
 $('#subscribe').on("click", function (event) {
 	event.preventDefault();
-	$('#invalid-mail').css('visibility', 'hidden');
+
+	$('#email-field').css('border-bottom', '1px solid white');
+	$('#invalid-mail-container').hide();
 
 	var mail = $('#email-field').val();
 	var regExp = new RegExp("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$");
@@ -21,6 +23,8 @@ $('#subscribe').on("click", function (event) {
 			}
 		})
 	} else {
-		$('#invalid-mail').css('visibility', 'visible');
+		$('#email-field').css('border-bottom', '1px solid red');
+
+		$('#invalid-mail-container').show();
 	}
 });
