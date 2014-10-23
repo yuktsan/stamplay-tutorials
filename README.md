@@ -5,7 +5,7 @@ A set of basic tutorials to understand Stamplay APIs
 
 * **01-local-login** - [Live Demo](https://31fd96.stamplay.com/index)
 * **02-TODO-MVC-with-js-sdk** - [Live Demo](https://b1b8d4.stamplay.com/index)
-* **03-landing-page-form** - [Live Demo](https://24f1ab.stamplay.com/)
+* **03-landing-page-form** - [Live Demo](https://ba3e34.stamplay.com/index)
 
 -----------------------
 
