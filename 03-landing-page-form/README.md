@@ -33,7 +33,11 @@ Define a form schema for this app, we will define the landing form as follows:
 ## Access your data
 You can access to the form entries via API at :
 
+<<<<<<< HEAD
 * https://0b2a06.stamplay.com/api/form/v0/forms/landing-form/entries
+=======
+* https://4a2b94.stamplay.com/api/form/v0/forms/landing-form/entries
+>>>>>>> 34dbc64b0eb18ad29856087c527125b04d2643c7
 
 or if you are creating an app:
 
