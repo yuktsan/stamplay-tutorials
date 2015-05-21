@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stamplay | Local login tutorial">
+    <meta name="author" content="Stamplay">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <title>Stamplay | Local login tutorial</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/custom/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/narrow.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="https://github.com/Stamplay/stamplay-tutorials/tree/master/01-user-local-login"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+    <div class="container">
+
+      <div class="header">
+        <img src="./img/stamplay-logo.png" width="150px"/>
+      </div>
+    
+      <div class="row">      
+        <div class="col-md-12 text-center">
+            <h3 class="text-muted" style="margin-bottom:40px" id="current-status">
+              Signup and login users using email and password 
+            </h3>            
+        </div>
+      </div>
+  
+      <div class="row hide-if-logged" >  
+        <div class="col-md-6">
+      
+          <div class="wrapper">
+            <form 
+              id="reg-form" 
+              action="/api/user/v0/users" 
+              method="POST" 
+              class="form-signin" 
+              data-parsley-validate>       
+                <h3 class="form-signin-heading">Signup</h3>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  name="email" 
+                  id="reg-email" 
+                  placeholder="Email Address" 
+                  required="" autofocus="" 
+                  data-parsley-type="email" 
+                  data-parsley-required 
+                  data-parsley-email_validate
+                >      
+
+                <input 
+                  type="password" 
+                  class="form-control" 
+                  name="password" 
+                  id="reg-password" 
+                  placeholder="Password" 
+                  data-parsley-required
+                  >
+
+                <button 
+                  id="reg-button" 
+                  class="btn btn-lg btn-primary btn-block" 
+                  type="submit">
+                  Sign up
+                </button>   
+            </form>
+          </div>    
+        </div>  
+
+        <div class="col-md-6">
+            <h4>User signup</h4>
+            <p>
+              To create a new user you need to get from him at least an email and a password and then just use the <a target="_blank" href="https://github.com/Stamplay/stamplay-js-sdk#User.signup">user.signup</a> method.<br/>
+              After a succesfull signup the user will be logged in.<br/>
+              The file <a target="_blank" href="https://github.com/Stamplay/stamplay-tutorials/blob/master/01-user-local-login/js/registration.js">registration.js</a> is showing you how to use the Javascript SDK to collect data from the form and send it to Stamplay.<br/>
+            </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" id="signup-success-message"></div>
+      </div>
+
+      <div class="row show-if-logged">
+        <div class="col-md-6">
+      
+          <div class="wrapper">
+            <form 
+              id="reg-form" 
+              action="/api/user/v0/users" 
+              method="POST" 
+              class="form-signin" 
+              data-parsley-validate>       
+                <h3 class="form-signin-heading">Logout</h3>
+                <button 
+                  id="logout-button" 
+                  class="btn btn-lg btn-primary btn-block" 
+                  type="submit">
+                  Logout
+                </button>   
+            </form>
+          </div>    
+        </div>  
+
+        <div class="col-md-6">
+            <h4>User logout</h4>
+            <p>
+              To logout you just need to call the <a href="https://github.com/Stamplay/stamplay-js-sdk#User.logout">user.logout</a> method.
+              <br/>
+              The file <a target="_blank" href="https://github.com/Stamplay/stamplay-tutorials/blob/master/01-user-local-login/js/logout.js">logout.js</a shows you how to use the logout method.<br/>
+            </p>
+        </div>
+      </div>
+
+      <div class="row hide-if-logged">
+        <div class="col-md-6">
+            <div class="wrapper">
+              <form 
+                id="login-form-2" 
+                action="/auth/v1/local/login" 
+                method="POST" 
+                class="form-signin" 
+                data-parsley-validate
+              >       
+                <h3 class="form-signin-heading">Login (redirect)</h3>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  name="email" 
+                  id="login-email-2" 
+                  placeholder="Email Address" 
+                  required="" 
+                  autofocus="" 
+                  data-parsley-type="email" 
+                  data-parsley-required
+                  />                
+                <input 
+                  type="password" 
+                  class="form-control" 
+                  name="password" 
+                  id="login-password-2" 
+                  placeholder="Password" 
+                  data-parsley-required
+                >          
+              </input>
+                
+                <input type="hidden" name="success_url" value="/index.html?logged=true">
+                <input type="hidden" name="error_url" value="/index.html?logged=false">
+
+                <button type="submit" class="btn btn-lg btn-primary btn-block" id="login-button-2" >Login</button>   
+              </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h4>User Login (with page refresh)</h4>
+            <p>
+              You can login users with a simple html form that sends data with a <strong>POST</strong> request to the 
+              <a href="https://stamplay.com/docs/rest-api#login-user" target="_blank">/auth/v1/local/login</a> endpoint.<br/> 
+              You just need to pass email and password.<br/>
+              You can customize the success and error redirect pages by adding two more
+              params to the form that can be send as hidden input. <br/>
+              This params are "success_url" and "error_url" to choose where you want to redirect your user after he/she tries to login.      
+              <br/>
+            </p>
+          </div>
+      </div>
+
+      <div class="row hide-if-logged">
+        <div class="col-md-6">
+          
+          <div class="row">
+            <div class="col-md-12" style="display:none;" id="error-login">
+                <div class="alert alert-danger">
+                    <span class="glyphicon glyphicon-remove"></span><strong>Email or password is incorrect!</strong>
+                </div>
+            </div>
+          </div>
+          <div class="wrapper">
+            <form id="login-form" action="/api/user/v0/users" method="POST" class="form-signin" data-parsley-validate>       
+              <h3 class="form-signin-heading">Login</h3>
+              <input type="text" class="form-control" name="email" id="login-email" placeholder="Email Address" required="" autofocus="" data-parsley-type="email" data-parsley-required/>                
+              <input type="password" class="form-control" name="password" id="login-password" placeholder="Password" data-parsley-required>
+              
+              <button id="login-button" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+            </form>  
+          </div>    
+          </div>
+          <div class="col-md-6">
+            <h4>User Login (xhr request)</h4>
+            <p>
+              In this example we use again the Javascript SDK to avoid any page refresh. Is like
+              the signup example but this time we'll use the <a href="https://stamplay.com/docs/rest-api#login-user" target="_blank">user.login</a>. 
+              Again, you just need to pass email and password.<br/>
+              The file <a target="_blank" href="https://github.com/Stamplay/stamplay-tutorials/blob/master/01-user-local-login/js/login.js">login.js</a> shows you how to use the Javascript SDK to login in Stamplay.<br/>          
+              
+
+            </p>
+          </div>
+      </div>   
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-muted text-center">Looking for social login tutorials? Check them out here!</h3>
+        </div>
+      </div> 
+
+
+      <div class="footer">
+        <p>&copy; Stamplay <script>document.write(new Date().getFullYear());</script></p>
+      </div>
+
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.7/parsley.min.js"></script>
+    <script type="text/javascript" src="./js/parsley-validator.js"></script>
+    <script type="text/javascript" src="./stamplay-js-sdk/dist/stamplay.js"></script>
+    <script>
+      Stamplay.init("tdemo");
+    </script>
+    <script src="./js/registration.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/async-login.js"></script>
+
+  </body>
+</html>
