@@ -11,7 +11,8 @@ You can find the complete demo [here](https://locallogin.stamplayapp.com)
 
 ## Using the example 
 
-You can use both your hosting or the Stamplay hosting but first you must create an application in the [Stamplay Editor](https://editor.stamplay.com).
+- Create an application in the [Stamplay Editor](https://editor.stamplay.com)
+- Use the Stamplay hosting or your own hosting 
 
 ### Stamplay hosting
 
