@@ -1,25 +1,28 @@
 stamplay-tutorials - 01-user-local-login
 ========================================
 
-See how to accept signups with email and password, handling password resets.
+## What you'll learn
 
+See how to accept signups with email and password.
 
+## The demo
 
+You can find the complete demo [here](https://locallogin.stamplayapp.com)
 
------------------------
+## Using the example 
 
-## Using the example
+You can use both your hosting or the Stamplay hosting but first you must create an application in the [Stamplay Editor](https://editor.stamplay.com).
 
-This example is a set of files that you only need to upload on you app on stamplay.com.
+### Stamplay hosting
 
-In order to start clone this repository :
+In order to use the Stamplay hosting you need to: 
+- Install the Stamplay [command line tool](https://stamplay.com/docs/hosting)
+- Clone the repository
+- [Deploy](https://stamplay.com/docs/hosting#deploying) this tutorial
 
-    git clone git@github.com:Stamplay/stamplay-tutorials
+### Your hosting
 
-Or download it as a zip file
-	
-	https://github.com/Stamplay/stamplay-tutorials/archive/master.zip
-
- upload the frontend files in your app and you can do it in two ways:
-
-* Copy/Upload them via the Layout section of your app on Stamplay editor
+You can use your own hosting and just make API calls towards Stamplay endpoints.
+You need to:
+- Drop your files in your own server
+- From the [Stamplay Editor](https://editor.stamplay.com), hosting section, add to the CORS settings your domain.
