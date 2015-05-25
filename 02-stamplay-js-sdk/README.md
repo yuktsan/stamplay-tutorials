@@ -9,7 +9,6 @@ See how to use the Stamplay JavaScript SDK to recreate with AngularJS a simple T
 
 - Create an application in the [Stamplay Editor](https://editor.stamplay.com)
 - Define the entity for this app, we will define the `todo` custom object as follows:
-    
     * Name: **title**, Type: **string**, Required : **true**
     * Name: **completed**, Type: **boolean**, Required : **true**
 - Use the Stamplay hosting or your own hosting 
@@ -17,8 +16,6 @@ See how to use the Stamplay JavaScript SDK to recreate with AngularJS a simple T
 ## The demo
 
 You can find the complete demo [here](https://stamplaytodo.stamplayapp.com/)
-
-
 
 ### Stamplay hosting
 
