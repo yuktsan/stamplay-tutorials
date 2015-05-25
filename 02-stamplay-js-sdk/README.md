@@ -29,5 +29,5 @@ In order to use the Stamplay hosting you need to:
 ### Use your hosting
 
 You can use your own hosting and just make API calls towards Stamplay endpoints. You need to:
-Deploy the files in the folder 02-stamplay-js-sdk
-Open your app in the [Stamplay Editor](https://editor.stamplay.com), select Hosting from the main menu and add your domain to the CORS settings 
+- Deploy the files in the folder 02-stamplay-js-sdk
+- Open your app in the [Stamplay Editor](https://editor.stamplay.com), select Hosting from the main menu and add your domain to the CORS settings 
