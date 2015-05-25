@@ -1,32 +1,33 @@
 stamplay-tutorials - 02-stamplay-js-sdk
 ========================================
 
-## What you'll learn
+## What you’ll learn
 
-See how to use the Stamplay JavaScript SDK to recreate with AngularJS a simple TodoMVC.
-
-## Using the example 
-
-- Create an application in the [Stamplay Editor](https://editor.stamplay.com)
-- Define the entity for this app, we will define the `todo` custom object as follows:
-    * Name: **title**, Type: **string**, Required : **true**
-    * Name: **completed**, Type: **boolean**, Required : **true**
-- Use the Stamplay hosting or your own hosting 
+This tutorial explains how to create a simple TodoMVC using Stamplay JavaScript SDK and AngularJS.
 
 ## The demo
 
-You can find the complete demo [here](https://stamplaytodo.stamplayapp.com/)
+You can find a functioning demo here: https://stamplaytodo.stamplayapp.com/
 
-### Stamplay hosting
+## Using this example 
+
+- Open the [Stamplay Editor](https://editor.stamplay.com) and create a new application.
+- Create a new custom object and name it `todo`.
+- Add two fields to the custom object
+  * Name: **title**, Type: **string**, Required: **true**
+  * Name: **completed**, Type: **boolean**, Required: **true**
+- Run Bower Install to install the dependencies.
+- Deploy the static files on Stamplay hosting or on your server.
+
+### Use Stamplay hosting
 
 In order to use the Stamplay hosting you need to: 
 - Install the Stamplay [command line tool](https://stamplay.com/docs/hosting)
-- Clone the repository
-- [Deploy](https://stamplay.com/docs/hosting#deploying) this tutorial
+- Clone this repository
+- [Deploy](https://stamplay.com/docs/hosting#deploying) the files in the folder 02-stamplay-js-sdk
 
-### Your hosting
+### Use your hosting
 
-You can use your own hosting and just make API calls towards Stamplay endpoints.
-You need to:
-- Drop your files in your own server
-- From the [Stamplay Editor](https://editor.stamplay.com), hosting section, add to the CORS settings your domain.
+You can use your own hosting and just make API calls towards Stamplay endpoints. You need to:
+- Deploy the files in the folder 02-stamplay-js-sdk
+- Open your app in the [Stamplay Editor](https://editor.stamplay.com), select Hosting from the main menu and add your domain to the CORS settings 
