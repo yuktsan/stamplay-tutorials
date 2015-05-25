@@ -14,8 +14,8 @@ You can find a functioning demo here: https://stamplaytodo.stamplayapp.com/
 - Open the [Stamplay Editor](https://editor.stamplay.com) and create a new application.
 - Create a new custom object and name it `todo`.
 - Add two fields to the custom object
-  | * Name: **title**, Type: **string**, Required: **true**
-  | * Name: **completed**, Type: **boolean**, Required: **true**
+  * Name: **title**, Type: **string**, Required: **true**
+  * Name: **completed**, Type: **boolean**, Required: **true**
 - Run Bower Install to install the dependencies.
 - Deploy the static files on Stamplay hosting or on your server.
 
