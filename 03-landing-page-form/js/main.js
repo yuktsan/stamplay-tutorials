@@ -10,7 +10,7 @@ $('#subscribe').on("click", function (event) {
 	if (valid) {
 		$.ajax({
 			'method': 'POST',
-			'url': '/api/form/v0/forms/landing-form/entries',
+			'url': '/api/form/v1/forms/landing/entries',
 			data: {
 				email: mail
 			},
@@ -24,7 +24,6 @@ $('#subscribe').on("click", function (event) {
 		})
 	} else {
 		$('#email-field').css('border-bottom', '1px solid red');
-
 		$('#invalid-mail-container').show();
 	}
 });
