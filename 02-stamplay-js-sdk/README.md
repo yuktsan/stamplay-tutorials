@@ -4,7 +4,6 @@ stamplay-tutorials - 02-stamplay-js-sdk
 ## What you'll learn
 
 See how to use the Stamplay JavaScript SDK to recreate with AngularJS a simple TodoMVC.
------------------------
 
 ## Using the example 
 
