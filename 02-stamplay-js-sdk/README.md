@@ -1,46 +1,36 @@
 stamplay-tutorials - 02-stamplay-js-sdk
 ========================================
 
+## What you'll learn
+
 See how to use the Stamplay JavaScript SDK to recreate with AngularJS a simple TodoMVC.
-
-
-
-
 -----------------------
 
-## Using the example
+## Using the example 
 
-For using this example you have to:
+- Create an application in the [Stamplay Editor](https://editor.stamplay.com)
+- Define the entity for this app, we will define the `todo` custom object as follows:
+    
+    * Name: **title**, Type: **string**, Required : **true**
+    * Name: **completed**, Type: **boolean**, Required : **true**
+- Use the Stamplay hosting or your own hosting 
 
-* Create a Stamplay app
-* Add custom object component and configure it
-* Upload the application's files
+## The demo
 
-## Create a Stamplay app
-
-Go to [Stamplay Editor](https://editor.stamplay.com/) and create a new application.
-
-## Add custom object component and configure it
-
-Define the entity for this app, we will define the Tag custom object as follows:
-
-### Tag
-* Name: **title**, Type: **string**, Required : **true**
-* Name: **completed**, Type: **boolean**, Required : **true**
-* Name: **user**, Type: **string**, Required : **true**
+You can find the complete demo [here](https://stamplaytodo.stamplayapp.com/)
 
 
-## Upload the application's file
 
-In order to start clone this repository :
+### Stamplay hosting
 
-    git clone git@github.com:Stamplay/stamplay-tutorials
+In order to use the Stamplay hosting you need to: 
+- Install the Stamplay [command line tool](https://stamplay.com/docs/hosting)
+- Clone the repository
+- [Deploy](https://stamplay.com/docs/hosting#deploying) this tutorial
 
-Or download it as a zip file
-	
-	https://github.com/Stamplay/stamplay-tutorials/archive/master.zip 
+### Your hosting
 
- upload the frontend files of this example in your app and you can do it in two ways:
-
-* Copy/Upload them via the Layout section of your app on Stamplay editor
-* Get Stamplay Sync on [OSX](http://cdn.stamplay.com/stamplay-sync/mac/stamplay-sync.zip) or [PC](http://cdn.stamplay.com/stamplay-sync/win/stamplay-sync.zip) and run it. Make it download the frontend assets of your app and then replace them with the ones you got from this repo. Stamplay Sync will upload everything for you on your app.
+You can use your own hosting and just make API calls towards Stamplay endpoints.
+You need to:
+- Drop your files in your own server
+- From the [Stamplay Editor](https://editor.stamplay.com), hosting section, add to the CORS settings your domain.

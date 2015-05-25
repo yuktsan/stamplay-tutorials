@@ -6,36 +6,35 @@
  * - exposes the model to the template and provides event handlers
  */
 angular.module('todomvc')
-	.controller('TodoIndex', ['$rootScope', '$scope', '$routeParams', '$filter', 'todoStorage',
-		function TodoIndex($rootScope, $scope, $routeParams, $filter, todoStorage) {
+	.controller('TodoIndex', ['$rootScope', '$scope', 'user',
+		function TodoIndex($rootScope, $scope, user) {
 
-			$scope.loginYes = true;
+			$scope.loginyes = true;
+			$scope.signupyes = false;
 
-			var user = new Stamplay.User().Model;
-			user.currentUser().then(function () {
-				if (user.get('_id')) {
-					window.location.href = '/todos/';
-				}
-			});
+			if (user.isLogged()) {
+				window.location.href = '/#/todos/' + user.get('_id');
+			}
 
 			$scope.login = function () {
 				user.login($scope.email, $scope.password).then(function (response) {
-					window.location.href = '/todos/';
+					window.location.href = '/#/todos/' + user.get('_id');
 				});
-			}
+			};
 
 			$scope.signup = function () {
 				var data = {
 					email: $scope.email,
 					password: $scope.password
-				}
+				};
 				user.signup(data).then(function (response) {
-					window.location.href = '/todos/';
+					window.location.href = '#/todos/' + user.get('_id');
 				});
-			}
+			};
 
 			$scope.toggleMode = function () {
-				$scope.loginYes = !$scope.loginYes;
-				$scope.signupYes = !$scope.signupYes;
-			}
+				$scope.loginyes = !($scope.loginyes);
+				$scope.signupyes = !($scope.signupyes);
+			};
+
 }]);

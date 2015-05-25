@@ -17,3 +17,7 @@ a{
   margin: 2px;
   text-decoration: none;
 }
+
+.cursoradd{
+  cursor: pointer;
+}
