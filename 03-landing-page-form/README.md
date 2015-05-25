@@ -8,11 +8,8 @@ See how to use the Stamplay Form API to submit a form entry.
 ## Using the example 
 
 - Create an application in the [Stamplay Editor](https://editor.stamplay.com)
-- Define a form schema for this app, we will define the landing form with this field:
+- Define the entity for this app, we will define the `landing` custom object as follows:
     * Name: **email**, Type: **string**, Required : **true**
-- Configure the form settings as follows:
-    * One entry per user : false
-    * Only logged user : false
 - Use the Stamplay hosting or your own hosting 
 
 ## The demo
