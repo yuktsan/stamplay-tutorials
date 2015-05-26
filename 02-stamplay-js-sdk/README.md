@@ -16,7 +16,7 @@ You can find a functioning demo here: https://stamplaytodo.stamplayapp.com/
 - Add two fields to the custom object
   * Name: **title**, Type: **string**, Required: **true**
   * Name: **completed**, Type: **boolean**, Required: **true**
-- Run Bower Install to install the dependencies.
+- Run ```bower install``` to install the dependencies.
 - Deploy the static files on Stamplay hosting or on your server.
 
 ### Use Stamplay hosting
