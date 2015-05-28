@@ -12,13 +12,10 @@ A set of basic tutorials to understand Stamplay APIs
 
 ## Using the examples
 
-Every example is a set of files that you only need to upload on you app on stamplay.com.
+Every example is a set of files that you only need to upload on you app on the [Stamplay Editor](https://editor.stamplay.com).
 
 In order to start clone this repository :
 
     git clone git@github.com:Stamplay/stamplay-tutorials
 
-Or download it as a zip file
-	
-	https://github.com/Stamplay/stamplay-tutorials/archive/master.zip 
-
+and [deploy](https://stamplay.com/docs/hosting#deploying) the example you prefer.
