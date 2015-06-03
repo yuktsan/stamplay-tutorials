@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  </head>
+  
+  <body class="stamplay-color">
+    <div class="row center-align stamplay-color" >
+      <h4 class="text-white">Try this</h4>
+    </div>
+    <div class="row margin-top-20" >
+      <div class="col s4 card-external">
+        <div class="card card-firebase">
+          <div class="card-content">
+            <img alt="firebase" height="46" src="./img/firebase.png" width="220">
+            <h4 class="center-align font-17">Realtime data from Firebase</h4>
+            <div class="row firebase-table">
+              <table class="responsive-table">
+                <thead class="firebase-table-head">
+                  <tr>
+                    <th data-field="id">First Name</th>
+                    <th data-field="name">Last Name</th>
+                    <th data-field="price">Text</th>
+                  </tr>
+                </thead>
+                <tbody id="firebasediv"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s4 z-depth-4" id="stamplay-card" style="padding:0px;height: 515px;">
+        <div class="card" style="height: 515px;"> 
+          <div class="card-content center-align">
+            <img alt="stamplay"  src="./img/logo-robot-no-neck.png" width="150">
+            <h4 class="center-align font-17" >Compile the form to send data to Stamplay</h4>
+             <div class="row margin-top-20">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input placeholder="John" id="first_name" type="text" class="validate">
+                      <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input placeholder="Doe" id="last_name" type="text" class="validate">
+                      <label for="last_name">Last Name</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="Hi" id="text" type="text" class="validate">
+                      <label for="text">Text</label>
+                    </div>
+                  </div>
+                </form>
+                <div class="col s6 offset-s3">
+                  <div style="height:18px;" class="red-text" id="error"></div>
+                </div>
+                 <div class="col s6 offset-s3" style="margin-top:10px;">
+                  <button class="btn waves-effect waves-light button-send" id="send-data">
+                    Send Data
+                    <i class="mdi-content-send right"></i>
+                  </button>
+                 </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s4 card-external" >
+        <div class="card black card-algolia">
+          <div class="card-content">
+            <img alt="Algolia256x80 dark" height="48" src="https://d3ibatyzauff7b.cloudfront.net/assets/algolia256x80_dark-7965b78c8746c8d564ded598d0fe24f3.png" width="140">
+            <h4 class="center-align font-17 text-white" >Search your data from Algolia</h4>
+            <input class="typeahead text-white" style="width:93%;" type="text" placeholder="Search..." id="user-search" spellcheck="false" />
+            <div id="algoliadiv" class="center-align text-white" style="margin-top:50px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-white center-align margin-top-20">
+      Thanks to <a href="https://algolia.com" target="_blank">Algolia</a> and <a href="https://firebase.com" target="_blank">Firebase</a>
+      <br>
+      Made with love by <a href="https://stamplay.com" target="_blank">Stamplay</a>
+    </div>
+  </body>
+  
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/typeahead.js/0.10.5/typeahead.jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="./js/wow.min.js" ></script>
+  <script>new WOW().init();</script>
+  <script src="https://drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/0.0.12/stamplay.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.5/firebase.js" type="text/javascript"></script>
+  <script src="./js/app.js" type="text/javascript"></script>
+</html>
