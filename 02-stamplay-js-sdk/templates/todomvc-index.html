@@ -1,0 +1,70 @@
+
+
+  <div>
+    <section id="todoapp">
+      <header>
+        <h1>stamplay todos</h1>
+      </header>
+    </section>
+
+    <section style="text-align:center">
+      <div class="input-container">
+        <input 
+          ng-model="email" 
+          class="input-field" 
+          id="email" 
+          placeholder="your email" 
+          type="text"/> 
+      </div>
+      
+      <div class="input-container">
+        <input 
+          ng-model="password" 
+          class="input-field" 
+          id="password" 
+          placeholder="your password" 
+          type="password"/>
+      </div>
+
+      <div class="input-container">
+        <input
+          ng-show="loginyes"
+          ng-click="login()" 
+          class="input-field" 
+          style="color:white;" 
+          id="register" 
+          type="button" 
+          value="Login"
+        />
+
+        <input
+          ng-show="signupyes"
+          ng-click="signup()" 
+          class="input-field" 
+          style="color:white;" 
+          id="register" 
+          type="button" 
+          value="Signup"
+        />
+      </div>
+
+      <span ng-show="loginyes">Don't have an account? 
+        <a class="cursoradd" ng-click="toggleMode()">Register here</a>
+      </span>
+
+      <span ng-show="signupyes">Already have an account? 
+        <a class="cursoradd" ng-click="toggleMode()">Login here</a>
+      </span>
+
+    </section>
+
+    <footer id="info">
+      <p>Give us feedback on :
+        <a href="https://github.com/Stamplay" target="_blank">Github</a>,
+        <a href="https://www.facebook.com/stamplay" target="_blank">Facebook</a>,
+        <a href="https://twitter.com/stamplay" target="_blank">Twitter</a>
+      </p>
+      <p>Inspired by <a href="http://todomvc.com">TodoMVC</a></p>
+    </footer>
+
+  </div>

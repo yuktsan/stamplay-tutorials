@@ -1,0 +1,18 @@
+  .twitter-typeahead { width: 100%; }
+  .twitter-typeahead .tt-input, .twitter-typeahead .tt-hint { width: 100%; margin: 0px; padding: 8px 12px; border: 2px solid #ccc; outline: none; }
+  .twitter-typeahead .tt-input:focus { border: 2px solid #0097cf; }
+  .twitter-typeahead .tt-hint { color: #999; }
+  .twitter-typeahead .tt-dropdown-menu { width: 100%; padding: 0; background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.2); border-top: 0px; }
+  .twitter-typeahead .tt-dropdown-menu .tt-suggestion { text-align: left; padding: 3px 20px; font-size: 18px; line-height: 24px; }
+  .twitter-typeahead .tt-dropdown-menu .tt-suggestion.tt-cursor { color: #fff; background-color: #0097cf; }
+  .twitter-typeahead .tt-dropdown-menu .tt-suggestion em { font-weight: bold; font-style: normal; }
+  .stamplay-color { background-color: #414B82; }
+  .text-white { color:white;}
+  .margin-top-20 { margin-top:20px;}
+  .card-external { margin-top:45px;padding:0px;}
+  .card-firebase { width:90%;margin:auto;height: 435px;background-color:#fec324;}
+  .card-algolia { width:90%;margin:auto;overflow: visible;height: 435px;}
+  .firebase-table { overflow-y: scroll;max-height: 250px;}
+  .firebase-table-head { border-bottom: 1px solid #000 }
+  .font-17 { font-size: 17px; }
+  .button-send {width:100%;background-color: #7A7F99;}

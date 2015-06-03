@@ -1,26 +1,28 @@
 stamplay-tutorials - 01-user-local-login
 ========================================
 
-See how to accept signups with email and password, handling password resets.
+## What you’ll learn
 
+This tutorial explains how to register users with email and password.
 
+## The demo
 
+You can find a functioning demo here: https://locallogin.stamplayapp.com
 
------------------------
+## Using this example 
 
-## Using the example
+- Open the [Stamplay Editor](https://editor.stamplay.com) and create a new application. You do not need to do anything else, because any Stamplay app can register users with email and password by default.
+- Deploy the static files on Stamplay hosting or on your server.
 
-This example is a set of files that you only need to upload on you app on stamplay.com.
+### Using Stamplay hosting
 
-In order to start clone this repository :
+In order to use the Stamplay hosting you need to: 
+- Install the Stamplay [command line tool](https://stamplay.com/docs/hosting)
+- Clone this repository
+- [Deploy](https://stamplay.com/docs/hosting#deploying) the files in the folder 01-user-local-login
 
-    git clone git@github.com:Stamplay/stamplay-tutorials
+### Using your hosting
 
-Or download it as a zip file
-	
-	https://github.com/Stamplay/stamplay-tutorials/archive/master.zip
-
- upload the frontend files in your app and you can do it in two ways:
-
-* Copy/Upload them via the Layout section of your app on Stamplay editor
-* Get Stamplay Sync on [OSX](http://cdn.stamplay.com/stamplay-sync/mac/stamplay-sync.zip) or [PC](http://cdn.stamplay.com/stamplay-sync/win/stamplay-sync.zip) and run it. Make it download the frontend assets of your app and then replace them with the ones you got from this repo. Stamplay Sync will upload everything for you on your app.
+You can use your own hosting and just make API calls towards Stamplay endpoints. You need to:
+- Deploy the files in the folder 01-user-local-login
+- Open your app in the [Stamplay Editor](https://editor.stamplay.com), select Hosting from the main menu and add your domain to the CORS settings 
